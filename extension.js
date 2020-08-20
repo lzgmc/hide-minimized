@@ -9,10 +9,6 @@ function enable() {
     const show = isOverviewWindow(win);
     return show && !win.get_meta_window().minimized;
   };
-  imports.ui.altTab.getWindows = (workspace) => {
-    const windows = getWindows(workspace);
-    return windows.filter((w, i, a) => !w.minimized);
-  };
 }
 
 function disable() {
